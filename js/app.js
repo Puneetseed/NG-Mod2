@@ -2,12 +2,12 @@
   'use strict';
   angular
     .module('ShoppingListCheckOff', [])
-    .controller('ToBuyShoppingController', ToBuyShoppingController)
+    .controller('ToBuyController', ToBuyController)
     .controller('AlreadyBoughtShoppingController', AlreadyBoughtShoppingController)
     .service('ShoppingListCheckOffService', ShoppingListCheckOffService);
 
-  ToBuyShoppingController.$inject = ['ShoppingListCheckOffService'];
-  function ToBuyShoppingController(ShoppingListCheckOffService) {
+  ToBuyController.$inject = ['ShoppingListCheckOffService'];
+  function ToBuyController(ShoppingListCheckOffService) {
     var controller = this;
 
     controller.BuyItems = ShoppingListCheckOffService.getToBuyItems();
